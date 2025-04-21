@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica', sans-serif;
+  }
+  
+  body {
+    background-color: #f9f9f9;
+    padding: 20px;
+    
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .auth-buttons .btn {
+    margin-left: 10px;
+    padding: 8px 14px;
+    border: 1px solid #000;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .main-content {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .main-content h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .main-content p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  
+    .search-bar {
+    position: relative;
+    width: 300px; /* adjust width as needed */
+    }
+   
+  .search-bar .material-symbols-outlined {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 20px;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 10px 12px 10px 38px; /* space on left for the icon */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+   
+    /* .search-bar input {
+      padding: 12px;
+      width: 300px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    } */
+  .featured-courses {
+    margin-top: 50px;
+    text-align: left;
+  }
+  
+  .featured-courses h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  .courses {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .course-card {
+    background-color: #fff;
+    padding: 20px;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .video-thumbnail {
+    background-color: #e0e0e0;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    font-size: 30px;
+  }
+  
+  .course-card h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .course-card p {
+    color: #333;
+    font-size: 14px;
+  }
+  
