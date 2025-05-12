@@ -1,100 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Dashboard</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LearnEase | Dashboard</title>
   <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
 
+<header>
+  Welcome Back to LearnEase!
+  <button id="mode-toggle" class="mode-switch">🌓</button>
+</header>
 
-  <nav>
-    <a href="homepage.html">homepage</a>
-    <a href="loginpage.html">Login</a>
-    <a href="dashboard.html">Dashboard</a>
-    <a href="explorecourses.html">Explore Courses</a>
-    <a href="coursedetailpage.html">Course Detail</a>
-    <a href="quiz.html">Quiz</a>
-    <a href="quizmockup.html">Quiz Mockup</a>
-    <a href="results.html">Results</a>
-    <a href="setting.html">Settings</a>
-    <a href="notifications.html">Notifications</a>
-  </nav>
+<!-- Sidebar Toggle Button -->
+<button id="menu-toggle" class="menu-btn">☰ Menu</button>
 
+<!-- Sidebar -->
+<!-- <div id="sidebar" class="sidebar">
+  <ul>
+    <li><a href="#">Dashboard</a></li>
+    <li><a href="#">Courses</a></li>
+    <li><a href="#">Quizzes</a></li>
+    <li><a href="#">Settings</a></li>
+  </ul>
+</div> -->
 
-  <div class="dashboard-container">
-    <aside class="sidebar">
-      <h2>Menu</h2>
-      <ul>
-        <li class="active">Home</li>
-        <li>Courses</li>
-        <li>Settings</li>
-      </ul>
-    </aside>
+<div class="container">
 
-    <main class="main-content">
-      <header>
-        <h1>Dashboard</h1>
-        <a href="#" class="logout">Log out</a>
-      </header>
+  <div class="section">
+    <h2>📚 My Courses</h2>
+    <div class="courses">
+      <div class="card">Web Development</div>
+      <div class="card">Data Structures</div>
+      <div class="card">Machine Learning</div>
+      <div class="card">UI/UX Design</div>
+    </div>
+    <a href="courses.html" class="button">View All Courses</a>
 
-      <section class="enrolled-section">
-        <h2>Enrolled Courses</h2>
-        <div class="course-list">
-          <div class="course-card">
-            <div class="course-thumb"></div>
-            <h3>Course</h3>
-            <div class="progress-bar">
-              <div class="progress"></div>
-            </div>
-            <p>Continue</p>
-          </div>
-          <div class="course-card">
-            <div class="course-thumb"></div>
-            <h3>Course</h3>
-            <div class="progress-bar">
-              <div class="progress"></div>
-            </div>
-            <p>Continue</p>
-          </div>
-          <div class="course-card">
-            <div class="course-thumb"></div>
-            <h3>Course</h3>
-            <div class="progress-bar">
-              <div class="progress"></div>
-            </div>
-            <p>Continue</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="recommended-section">
-        <h2>Recommended Courses</h2>
-        <div class="course-list">
-          <div class="course-card">
-            <div class="course-thumb"></div>
-            <h3>Course</h3>
-            <p>Video Course</p>
-            <p>PDF</p>
-            <p>Quiz</p>
-          </div>
-          <div class="course-card">
-            <div class="course-thumb"></div>
-            <h3>Course</h3>
-            <p>Video Course</p>
-            <p>PDF</p>
-            <p>Quiz</p>
-          </div>
-          <div class="course-card">
-            <div class="course-thumb"></div>
-            <h3>Course</h3>
-            <p>Video Course</p>
-            <p>PDF</p>
-            <p>Quiz</p>
-          </div>
-        </div>
-      </section>
-    </main>
   </div>
+
+  <!-- Profile Picture Upload -->
+  <div class="profile-section section">
+    <h2>👤 My Profile</h2>
+    <img src="default-profile.png" id="profile-pic" alt="Profile Picture" width="100">
+    <p id="profile-name">Your Name</p>
+    <p id="profile-email">youremail@example.com</p>
+    <div>
+      <a href="profile.html" class="button">My Account</a>
+    </div>
+  </div>
+  
+
+  <div class="section">
+    <h2>📝 Upcoming Quizzes</h2>
+    <div class="quizzes">
+      <div class="card">JavaScript Basics - 2 days left</div>
+      <div class="card">HTML & CSS - 4 days left</div>
+    </div>
+    <!-- <a href="#" class="button">See Quiz Schedule</a> -->
+     <a href="quiz.html" class="button">See Quiz Schedule</a>
+
+  </div>
+
+  <div class="section">
+    <h2>🔔 Notifications</h2>
+    <div class="notifications">
+      <div class="card">New course added: ReactJS</div>
+      <div class="card">Server maintenance on 30th April</div>
+    </div>
+<a href="notifications.html" class="button">View All Notifications</a>
+  </div>
+
+  <div class="section">
+    <h2>🏆 Achievements</h2>
+    <p>Congratulations! You've completed 3 courses. 🎉</p>
+<a href="achievements.html" class="button">Download Certificates</a>
+  </div>
+
+</div>
+
+<script src="javascript/dashboard.js"></script>
 </body>
 </html>

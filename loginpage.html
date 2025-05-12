@@ -1,60 +1,37 @@
-
 <!DOCTYPE html>
- <html lang="en">
- <head>
-   <meta charset="UTF-8">
-   <title>Login</title>
-   <link rel="stylesheet" href="css/loginpage.css"> <!-- Make sure your CSS file is linked -->
- </head>
- <body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="css/loginpage.css">
+  <script defer src="js/login.js"></script>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Login</h1>
+    <form id="loginForm">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
 
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter your password" required>
 
+      <div class="actions">
+        <button type="submit">Login</button>
+        <a href="#">Forgot password?</a>
+      </div>
 
-  <nav>
-    <a href="homepage.html">homepage</a>
-    <a href="loginpage.html">Login</a>
-    <a href="dashboard.html">Dashboard</a>
-    <a href="explorecourses.html">Explore Courses</a>
-    <a href="coursedetailpage.html">Course Detail</a>
-    <a href="quiz.html">Quiz</a>
-    <a href="quizmockup.html">Quiz Mockup</a>
-    <a href="results.html">Results</a>
-    <a href="setting.html">Settings</a>
-    <a href="notifications.html">Notifications</a>
-  </nav>
-   <div class="login-container">
-     <h1>Login</h1>
- 
-     <form>
-       <label for="email">Email Address</label>
-       <input type="email" id="email" placeholder="Enter your email" required>
- 
-       <label for="password">Password</label>
-       <input type="password" id="password" placeholder="Enter your password" required>
- 
-       <div class="actions">
-         <button type="submit">Login</button>
-         <a href="#">Forgot password?</a>
-       </div>
- 
-       <div class="divider">
-         <span>Or login with</span>
-       </div>
- 
-       <button class="google-btn">
-         <img src="https://53.fs1.hubspotusercontent-na1.net/hubfs/53/image8-2.jpg" alt="Google Logo">
-         Google
-       </button>
-     </form>
- 
-     <p class="signup-text">Don’t have an account? <a href="#">Sign up</a></p>
-   </div>
- </body>
- </html>
- 
+      <div class="divider">
+        <span>Or login with</span>
+      </div>
 
-
-
-
-
- 
+      <button type="button" class="google-btn">
+        <img src="https://53.fs1.hubspotusercontent-na1.net/hubfs/53/image8-2.jpg" alt="Google Logo">
+        Google
+      </button>
+    </form>
+    <p class="signup-text">Don’t have an account? <a href="#">Sign up</a></p>
+  </div>
+  <script src="javascript/loginpage.js"></script>
+</body>
+</html>

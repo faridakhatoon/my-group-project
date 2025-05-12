@@ -2,75 +2,71 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>E-Learning</title>
   <link rel="stylesheet" href="css/homepage.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
-  
 </head>
 <body>
 
   <nav>
-    <a href="homepage.html">homepage</a>
-    <a href="loginpage.html">Login</a>
-    <a href="dashboard.html">Dashboard</a>
-    <a href="explorecourses.html">Explore Courses</a>
-    <a href="coursedetailpage.html">Course Detail</a>
-    <a href="quiz.html">Quiz</a>
-    <a href="quizmockup.html">Quiz Mockup</a>
-    <a href="results.html">Results</a>
-    <a href="setting.html">Settings</a>
-    <a href="notifications.html">Notifications</a>
+    <a href="#">Homepage</a>
+    <a href="login.html">Login</a>
+    <a href="#">Dashboard</a>
+    <a href="#">Explore Courses</a>
+    <a href="#">Quiz</a>
+    <a href="#">Results</a>
+    <a href="#">Settings</a>
+    <a href="#">Notifications</a>
   </nav>
 
   <header class="header">
     <div class="logo">E-Learning</div>
     <div class="auth-buttons">
-      <button class="btn">Log in</button>
-      <button class="btn">Sign up</button>
+      <button class="btn" onclick="redirectToLogin()">Log In</button>
+      <!-- Sign Up button removed -->
     </div>
   </header>
 
   <main class="main-content">
-    <h1>Learn new skills online</h1>
-    <p>Video courses and quizzes to help you learn.</p>
+    <h1 class="colorful-text fade-in">Learn New Skills Online</h1>
+    <p class="fade-in">Video courses and quizzes to help you learn.</p>
 
-    <div class="search-bar">
-      <span class="material-symbols-outlined">
-        search
-        </span>
-      <input type="text" placeholder= 
-       "Search for courses" />
-      
+    <div class="search-bar fade-in">
+      <span class="material-symbols-outlined">search</span>
+      <input type="text" id="searchinput" placeholder="Search for courses" oninput="searchCourses()" />
     </div>
 
-    <section class="featured-courses">
-      <h2>Featured Courses</h2>
+    <section class="featured-courses fade-in">
+      <h2 class="fade-in">Featured Courses</h2>
       <div class="courses">
-        <div class="course-card">
+        <div class="course-card fade-in">
           <div class="video-thumbnail">
             <span>&#9658;</span>
           </div>
-          <h3>Course Title</h3>
+          <h3>HTML and CSS</h3>
           <p>Video Course<br>Quiz</p>
         </div>
         <div class="course-card">
           <div class="video-thumbnail">
             <span>&#9658;</span>
           </div>
-          <h3>Course Title</h3>
+          <h3>JavaScript Basics</h3>
           <p>Video Course<br>Quiz</p>
         </div>
         <div class="course-card">
           <div class="video-thumbnail">
             <span>&#9658;</span>
           </div>
-          <h3>Course Title</h3>
+          <h3>React Beginner</h3>
           <p>Video Course<br>Quiz</p>
         </div>
       </div>
     </section>
   </main>
+
+  <script src="javascript/homepage.js">
+    
+  </script>
+
 </body>
 </html>
-

@@ -1,125 +1,319 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Helvetica', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica', sans-serif;
+}
+
+/* Background with overlay */
+body {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1519389950473-47ba0277781c') no-repeat center center/cover;
+  min-height: 100vh;
+  color: white;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* Header */
+.header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+/* Buttons */
+.auth-buttons .btn {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.auth-buttons .btn:hover {
+  background: #45a049;
+}
+
+/* Main content */
+.main-content {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Animated Heading */
+.colorful-text {
+  font-size: 40px;
+  font-weight: bold;
+  background: linear-gradient(270deg, #ff6ec4, #7873f5, #4db8ff, #55efc4);
+  background-size: 800% 800%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: colorChange 8s ease infinite;
+}
+
+@keyframes colorChange {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.main-content p {
+  margin-top: 10px;
+  color: #ddd;
+}
+
+/* Search */
+.search-bar {
+  position: relative;
+  width: 300px;
+  margin: 30px auto;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px 35px 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.search-bar .material-symbols-outlined {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #aaa;
+}
+
+/* Featured Courses */
+.featured-courses {
+  margin-top: 50px;
+  padding: 0 20px;
+}
+
+.featured-courses h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.courses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.course-card {
+  background: white;
+  color: black;
+  padding: 20px;
+  width: 220px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.video-thumbnail {
+  background: #e0e0e0;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-size: 30px;
+}
+
+/* Modal */
+/* .modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  animation: fadeIn 0.5s;
+}
+
+.modal-content {
+  background: white;
+  color: black;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  animation: slideIn 0.5s;
+}
+
+.modal-content input, .modal-content button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+} 
+
+.modal-content button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+}
+.modal-content button:hover {
+  background: #45a049;
+} 
+
+ .close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}  */
+
+/* Animations */
+@keyframes slideIn {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Error text */
+ .error {
+  color: red;
+  font-size: 0.9rem;
+} 
+
+/* when i hover mouse on course card it will be zoomin */
+
+.course-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* it is apply for slightly move upto 5 px of course name that is html,css and so on */
+
+.course-card h3, .course-card p {
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover h3, .course-card:hover p {
+  transform: translateY(-5px);
+}
+
+
+
+
+
+
+
+
+
+ /* Fade In Animation mean while loading the page */
+.fade-in {
+  animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
-  body {
-    background-color: #f9f9f9;
-    padding: 20px;
-    
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
+}
+
+
+
+
+
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
   }
-  
-  .logo {
-    font-weight: bold;
-    font-size: 20px;
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
-  
-  .auth-buttons .btn {
-    margin-left: 10px;
-    padding: 8px 14px;
-    border: 1px solid #000;
-    background-color: #fff;
-    cursor: pointer;
-    border-radius: 4px;
+}
+
+/* Zoom In Animation */
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
   }
-  
-  .main-content {
-    text-align: center;
-    margin-top: 40px;
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
-  
-  .main-content h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
+}
+
+
+
+
+.zoom-in {
+  animation: zoomIn 1s ease forwards;
+}
+
+/* Slide Left Animation */
+/* @keyframes slideLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
   }
-  
-  .main-content p {
-    color: #555;
-    font-size: 16px;
-    margin-bottom: 30px;
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
-  
-    .search-bar {
-    position: relative;
-    width: 300px; /* adjust width as needed */
-    }
-   
-  .search-bar .material-symbols-outlined {
-    position: absolute;
-    top: 50%;
-    left: 12px;
-    transform: translateY(-50%);
-    color: #aaa;
-    font-size: 20px;
-  }
-  
-  .search-bar input {
-    width: 100%;
-    padding: 10px 12px 10px 38px; /* space on left for the icon */
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-  }
-   
-    /* .search-bar input {
-      padding: 12px;
-      width: 300px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 16px;
-    } */
-  .featured-courses {
-    margin-top: 50px;
-    text-align: left;
-  }
-  
-  .featured-courses h2 {
-    font-size: 22px;
-    margin-bottom: 20px;
-  }
-  
-  .courses {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .course-card {
-    background-color: #fff;
-    padding: 20px;
-    width: 200px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .video-thumbnail {
-    background-color: #e0e0e0;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    font-size: 30px;
-  }
-  
-  .course-card h3 {
-    font-size: 16px;
-    margin-bottom: 8px;
-  }
-  
-  .course-card p {
-    color: #333;
-    font-size: 14px;
-  }
-  
+}
+
+.slide-left {
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+/* Typing Animation Styling */
+/* .typing-text {
+  margin-top: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #4CAF50;
+  min-height: 40px;
+  border-right: 2px solid black;
+  white-space: nowrap;
+  overflow: hidden;
+} */
+
+ */

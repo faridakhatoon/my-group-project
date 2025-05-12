@@ -1,70 +1,73 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #fafafa;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    height: 100vh;
-    padding-top: 40px;
-    margin: 0;
-  }
-  
-  .quiz-container {
-    width: 90%;
-    max-width: 500px;
-  }
-  
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #111;
-  }
-  
-  .quiz-box {
-    background-color: white;
-    padding: 20px 25px;
-    border-radius: 12px;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  }
-  
-  .quiz-box h2 {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-    color: #222;
-  }
-  
-  .quiz-box hr {
-    margin: 10px 0 20px;
-    border: none;
-    height: 1px;
-    background: #ccc;
-  }
-  
-  .quiz-box label {
-    display: block;
-    font-size: 1rem;
-    margin: 10px 0;
-    cursor: pointer;
-  }
-  
-  .quiz-box input[type="radio"] {
-    margin-right: 10px;
-  }
-  
-  .quiz-box button {
-    margin-top: 20px;
-    padding: 12px 25px;
-    font-size: 1rem;
-    background-color: #e0e0e0;
-    color: #000;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  .quiz-box button:hover {
-    background-color: #ccc;
-  }
-  
+  font-family: Arial, sans-serif;
+  background-color: #f7f9fc;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.quiz-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.quiz {
+  background: #e8f0fe;
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.quiz:hover {
+  background: #d2e3fc;
+}
+
+.quiz h3 {
+  margin: 0 0 10px;
+}
+
+.quiz button {
+  background-color: #4a6cf7;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.upcoming-btn {
+  display: block;
+  margin: 30px auto 10px;
+  background-color: #ffb703;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#upcoming-quizzes {
+  margin-top: 20px;
+  background: #fff4cc;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.hidden {
+  display: none;
+}

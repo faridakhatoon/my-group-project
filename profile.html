@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Profile - LearnEase</title>
+  <link rel="stylesheet" href="css/profile.css" />
+</head>
+<body>
+  <div class="profile-container">
+    <h1>👤 My Account</h1>
+    <div class="profile-card">
+      <label for="imageUpload">
+        <img id="profilePic" src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-pic" />
+      </label>
+      <input type="file" id="imageUpload" accept="image/*" style="display: none" onchange="previewImage(event)" />
+
+      <div class="info">
+        <input type="text" id="name" value="Student Name" disabled />
+        <input type="email" id="email" value="student@example.com" disabled />
+      </div>
+
+      <div class="buttons">
+        <button class="edit-btn" onclick="toggleEdit()">Edit Profile</button>
+        <button class="save-btn" onclick="saveProfile()" style="display: none;">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleEdit() {
+      document.getElementById("name").disabled = false;
+      document.getElementById("email").disabled = false;
+      document.querySelector(".save-btn").style.display = "inline-block";
+    }
+
+    function saveProfile() {
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+
+      alert(`Profile updated:\nName: ${name}\nEmail: ${email}`);
+
+      // Optional: Save to localStorage
+      localStorage.setItem("profileName", name);
+      localStorage.setItem("profileEmail", email);
+
+      document.getElementById("name").disabled = true;
+      document.getElementById("email").disabled = true;
+      document.querySelector(".save-btn").style.display = "none";
+    }
+
+    function previewImage(event) {
+      const reader = new FileReader();
+      reader.onload = function () {
+        document.getElementById("profilePic").src = reader.result;
+        localStorage.setItem("profilePic", reader.result);
+      };
+      reader.readAsDataURL(event.target.files[0]);
+    }
+
+    // Load stored data if any
+    window.onload = function () {
+      const savedName = localStorage.getItem("profileName");
+      const savedEmail = localStorage.getItem("profileEmail");
+      const savedPic = localStorage.getItem("profilePic");
+
+      if (savedName) document.getElementById("name").value = savedName;
+      if (savedEmail) document.getElementById("email").value = savedEmail;
+      if (savedPic) document.getElementById("profilePic").src = savedPic;
+    };
+  </script>
+</body>
+</html>

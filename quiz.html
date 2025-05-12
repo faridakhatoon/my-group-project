@@ -2,56 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Quiz</title>
+  <title>Quizzes - LearnEase</title>
   <link rel="stylesheet" href="css/quiz.css">
 </head>
 <body>
+  <div class="container">
+    <h1>📘 Quizzes</h1>
 
+    <div class="quiz-list">
+      <div class="quiz">
+        <h3>HTML Basics</h3>
+        <p>Test your knowledge of basic HTML elements.</p>
+        <button>Start Quiz</button>
+      </div>
+      <div class="quiz">
+        <h3>CSS Fundamentals</h3>
+        <p>Assess your understanding of CSS styling and layout.</p>
+        <button>Start Quiz</button>
+      </div>
+      <div class="quiz">
+        <h3>JavaScript Introduction</h3>
+        <p>Explore core concepts of JavaScript programming.</p>
+        <button>Start Quiz</button>
+      </div>
+    </div>
 
+    <button class="upcoming-btn" onclick="showUpcoming()">📅 See Upcoming Quizzes</button>
 
-  <nav>
-    <a href="homepage.html">homepage</a>
-    <a href="loginpage.html">Login</a>
-    <a href="dashboard.html">Dashboard</a>
-    <a href="explorecourses.html">Explore Courses</a>
-    <a href="coursedetailpage.html">Course Detail</a>
-    <a href="quiz.html">Quiz</a>
-    <a href="quizmockup.html">Quiz Mockup</a>
-    <a href="results.html">Results</a>
-    <a href="setting.html">Settings</a>
-    <a href="notifications.html">Notifications</a>
-  </nav>
-
-  <div class="quiz-container">
-    <h1>Quiz</h1>
-
-    <form class="quiz-box">
-      <h2>Question?</h2>
-      <hr>
-
-      <label>
-        <input type="radio" name="option" value="1">
-        Option 1
-      </label><br>
-
-      <label>
-        <input type="radio" name="option" value="2">
-        Option 2
-      </label><br>
-
-      <label>
-        <input type="radio" name="option" value="3">
-        Option 3
-      </label><br>
-
-      <label>
-        <input type="radio" name="option" value="4">
-        Option 4
-      </label><br>
-
-      <button type="submit">Submit</button>
-    </form>
+    <div id="upcoming-quizzes" class="hidden">
+      <h2>📅 Upcoming Quizzes</h2>
+      <ul>
+        <li>ReactJS Basics - 12th May</li>
+        <li>Git & GitHub - 15th May</li>
+        <li>Python Logic - 20th May</li>
+      </ul>
+    </div>
   </div>
 
+  <script src="javascript/quiz.js"></script>
 </body>
 </html>

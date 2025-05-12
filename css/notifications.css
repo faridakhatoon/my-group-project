@@ -1,93 +1,50 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  body {
-    background-color: #f9f9f9;
-    color: #111;
-  }
-  
-  .container {
-    display: flex;
-    height: 100vh;
-  }
-  
-  .sidebar {
-    width: 200px;
-    background-color: #f2f2f2;
-    padding: 20px;
-    border-right: 1px solid #ccc;
-  }
-  
-  .sidebar ul {
-    list-style: none;
-  }
-  
-  .menu-item {
-    padding: 12px;
-    margin-bottom: 10px;
-    color: #444;
-    cursor: pointer;
-  }
-  
-  .menu-item.active {
-    background-color: #e6e6e6;
-    border-radius: 4px;
-    font-weight: bold;
-  }
-  
-  .notifications-content {
-    flex: 1;
-    padding: 40px;
-  }
-  
-  h2 {
-    font-size: 24px;
-    margin-bottom: 30px;
-  }
-  
-  .notifications-list {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: white;
-    overflow: hidden;
-  }
-  
-  .notification {
-    display: flex;
-    padding: 20px;
-    border-bottom: 1px solid #eee;
-    align-items: flex-start;
-  }
-  
-  .notification:last-child {
-    border-bottom: none;
-  }
-  
-  .icon {
-    font-size: 24px;
-    margin-right: 20px;
-    color: #666;
-    padding-top: 5px;
-  }
-  
-  .text strong {
-    font-size: 16px;
-    display: block;
-    margin-bottom: 4px;
-  }
-  
-  .text p {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 5px;
-  }
-  
-  .time {
-    font-size: 12px;
-    color: #999;
-  }
-  
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+#notification-list {
+  list-style: none;
+  padding: 0;
+}
+
+.notification {
+  background: #eaf0fa;
+  border-left: 5px solid #3b82f6;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+.back-btn {
+  display: block;
+  margin-top: 30px;
+  text-align: center;
+  text-decoration: none;
+  background: #3b82f6;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
